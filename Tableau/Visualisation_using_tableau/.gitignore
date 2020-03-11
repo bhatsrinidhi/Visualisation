@@ -1,0 +1,30 @@
+# Ignore the Following Files
+.DS_Store
+*.csv
+*.csv.gz
+*.zip
+*.pem
+*.txt
+*.xls
+*.json
+*.jpg
+*.pkl
+*.jpeg
+*.h5
+*.data
+*.data.gz
+*.gz
+*.sav
+*.zip
+*.dot
+*.tps
+*.twbr
+
+# Hidden Folders
+Bookmarks
+Datasources
+Extensions
+Logs
+Mapsources
+Services
+Shapes
