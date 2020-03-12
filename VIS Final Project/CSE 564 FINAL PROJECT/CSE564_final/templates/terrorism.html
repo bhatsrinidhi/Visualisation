@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+	<title>Terrorism Analysis</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
+	</script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
+	<script src="../static/lib/d3.v4.min.js"></script>
+	<script src="https://d3js.org/d3-path.v0.1.min.js"></script>
+	<script src="https://d3js.org/d3-shape.v0.6.min.js"></script>
+	<script src="../static/js/terrorism.js"></script>
+	<script src="../static/js/d3-tip.js"></script>
+	<script src="http://d3js.org/queue.v1.min.js"></script>
+  <script src="http://d3js.org/topojson.v1.min.js"></script>
+<!-- <script src="{{ url_for('static', filename='js/crypto.js') }}"></script> -->
+	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+</head>
+<body>
+	<h1 class="crypto-title"> Terrorism Analysis </h1>
+  <h3 class="targets"> Favourite Targets </h3>
+	<span class="select-dropdown">
+	    <div class="input-group">
+			   <h2><b id="select-rows" class="select-rows"> Select the data to plot - </b></h2>
+			   <select id="sheetrows" class="sheetrows">
+					 <option value = "countAttacks">Number Of Attacks</option>
+           <option value = "Targettype">Favourite Targets</option>
+           <option value = "AttackType">Popular Attacking Methods</option>
+           <option value = "Country">Success Of Attacks</option>
+           <option value = "Trend">Trend in Terrorist Activities</option>
+           <option value = "groups">Terrorism Groups</option>
+					 <option value = "prediction">Casualities Prediction</option>
+					 <option value = "hfi">Human Freedom Index</option>
+					 <option value = "dashboard">Year-wise Analysis</option>
+         </select>
+		  </div>
+  	</span>
+
+
+	<div id="crossfilter" class="crossfilter" style="display: none">
+          <hidden id="hidden" value="0">
+            <div style="height:100px;width:9%;margin-left:20px">
+            </div>
+
+            <div class="menu" id="menu">
+							<span class="select-dropdown">
+							    <div class="input-group">
+										<h2><b id="select-rows" class="select-rows"> Select the attribute - </b></h2>
+				             <select id="dropdown" class="dropdownClass">
+						            <option value="attacktype1">Attack Type</option>
+						            <option value="targtype1">Target type</option>
+						            <option value="Killed">Kill</option>
+				              </select>
+
+									</div>
+						  	</span>
+            </div>
+      </div>
+<div id="graph" class="graph"></div>
+  <img class="terrorgroups" src="../static/Terrorist_Groups.png" alt="Terrorist Groups" style="margin-left:12%"/>
+</body>
+</html>

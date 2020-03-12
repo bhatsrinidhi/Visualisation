@@ -1,0 +1,332 @@
+@import url(https://fonts.googleapis.com/css?family=Dosis:700);
+body {
+   	margin:0;
+   	padding:0;
+   	/* background-color:#E9DBCE; */
+    background: url(terrorism.jpg) no-repeat center center fixed;
+    background-size: 100% 100%;
+    font-family: "Dosis", Helvetica, Arial, sans-serif;
+    color: #34495e;
+}
+
+.sheetrows {
+    min-width: 9%;
+    height: 35px;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.15);
+    box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+    cursor: pointer;
+    outline: none;
+    font-weight: bold;
+    color: #8AA8BD;
+    margin-left: 20px;
+}
+.graph {
+    width: 100%;
+    height: 100%;
+    margin-top: 3%;
+}
+.d3-tooltip {
+    line-height: 1;
+    font-weight: bold;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 2px;
+}
+.bar rect {
+    fill: rgb(105, 179, 162);
+    shape-rendering: crispEdges;
+}
+.bar rect:hover {
+    fill: rgba(0,0,0,.8);
+}
+.axis path, .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+.tick text {
+    font-size: 13px;
+    font-weight: bold;
+}
+.xlabel, .ylabel {
+    font-size: 17px;
+    font-weight: bold;
+}
+.value {
+    border-bottom: 4px dashed #bdc3c7;
+    text-align: center;
+    font-weight: bold;
+    font-size: 5em;
+    width: 300px;
+    height: 70px;
+    line-height: 55px;
+    margin-top: 30px;
+    letter-spacing: -.07em;
+    text-shadow: white 2px 2px 2px;
+    margin-bottom: 40px;
+}
+.select-dropdown {
+  float: right;
+  margin: -80px 30px 0px 0px;
+}
+.crypto-html {
+    margin: 0px 25px 0px 25px;
+}
+.crypto-title {
+    font-family: fantasy;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+.targets {
+    font-family: serif;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+.arc text {
+    font-size: 12px;
+    font-weight: bold;
+}
+.tooltip {
+	  background: #eee;
+	  box-shadow: 0 0 5px #999999;
+	  color: #333;
+	  font-size: 12px;
+	  left: 130px;
+	  padding: 10px;
+	  position: absolute;
+	  text-align: center;
+	  top: 95px;
+	  width: 100px;
+	  z-index: 10;
+	  display: block;
+	  opacity: 0;
+}
+.button {
+    position: relative;
+    overflow: hidden;
+    padding: 0.3em 0.75em;
+    text-align: center;
+    text-decoration: none;
+    color: #2194E0;
+    border: 2px solid #2194E0;
+    font-size: 20px;
+    border-radius: 0.3em;
+    transition: all 0.2s ease-in-out;
+    margin: 13%;
+    pointer-events: cursor;
+}
+.button.mainbutton:before {
+    content: "";
+    background-color: rgba(255,255,255,0.5);
+    height: 100%;
+    width: 4em;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -5.5em;
+    transform: skewX(-45deg) translateX(0);
+    transition: none;
+}
+.button:hover {
+    background-color: #2194E0;;
+    color: #fff;
+    border-bottom: 4px solid darken(#2194E0;, 10%);
+}
+.button.mainbutton:hover:before {
+    transform: skewX(-45deg) translateX(13.5em);
+    transition: all 0.5s ease-in-out;
+}
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 3px;
+}
+.circle {
+  fill: steelblue;
+}
+.tabcontent {
+  margin-top: 3%;
+}
+#scatter {
+  margin-left: 46%;
+}
+.tablinksub {
+  margin: 0;
+  margin-left: 2%;
+}
+.legend {
+  font-family: "Verdana";
+  font-size: .7em;
+  margin-top: -25%;
+  margin-left: 53%;
+}
+.legenddiv {
+  font-family: "Verdana";
+  font-size: .7em;
+  margin-top: -40%;
+  margin-left: 65%;
+}
+.legendtime {
+  font-family: "Verdana";
+  font-size: .7em;
+  margin-top: -30%;
+  margin-left: 65%;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+.x.axis path {
+  display: none;
+}
+
+.box {
+  font: 10px sans-serif;
+}
+
+.box line,
+.box rect,
+.box circle {
+  fill: steelblue;
+  stroke: #000;
+  stroke-width: 1px;
+}
+
+.box .center {
+  stroke-dasharray: 3,3;
+}
+
+.box .outlier {
+  fill: none;
+  stroke: #000;
+}
+
+.axis {
+  font: 12px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+
+  .names {
+  fill: none;
+  stroke: #fff;
+  stroke-linejoin: round;
+  }
+
+    /* Tooltip CSS */
+    .d3-tip {
+    line-height: 1.5;
+    font-weight: 400;
+    font-family:"avenir next", Arial, sans-serif;
+    padding: 6px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #FFA500;
+    border-radius: 1px;
+    pointer-events: none;
+    }
+
+    /* Creates a small triangle extender for the tooltip */
+    .d3-tip:after {
+      box-sizing: border-box;
+      display: inline;
+      font-size: 8px;
+      width: 100%;
+      line-height: 1.5;
+      color: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      pointer-events: none;
+
+    }
+
+    /* Northward tooltips */
+    .d3-tip.n:after {
+      content: "\25BC";
+      margin: -1px 0 0 0;
+      top: 100%;
+      left: 0;
+      text-align: center;
+    }
+
+    /* Eastward tooltips */
+    .d3-tip.e:after {
+      content: "\25C0";
+      margin: -4px 0 0 0;
+      top: 50%;
+      left: -8px;
+    }
+
+    /* Southward tooltips */
+    .d3-tip.s:after {
+      content: "\25B2";
+      margin: 0 0 1px 0;
+      top: -8px;
+      left: 0;
+      text-align: center;
+    }
+
+    /* Westward tooltips */
+    .d3-tip.w:after {
+      content: "\25B6";
+      margin: -4px 0 0 -1px;
+      top: 50%;
+      left: 100%;
+    }
+
+/*    text{
+      pointer-events:none;
+    }*/
+
+    .details{
+      color:white;
+    }
+
+.area {
+  fill: #900C3F;
+  clip-path: url(#clip);
+}
+
+.zoom {
+  cursor: move;
+  fill: none;
+  pointer-events: all;
+}
+
+#dropdown {
+    margin-left: 10%;
+}
+
+.dropdownClass {
+  min-width: 9%;
+  height: 35px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.15);
+  box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+  cursor: pointer;
+  outline: none;
+  font-weight: bold;
+  color: #8AA8BD;
+  margin-left: 20px;
+  font-weight: bold;
+  font-size: 15px;
+}
+.dropdownClass {
+  font-size: 10px;
+}
